@@ -9,6 +9,8 @@ class App extends Component {
     page: 1,
     searchQuery: '',
     data: [],
+    showModal: false,
+    modalImage: '',
   };
   loadMore = () => {
     this.setState(prevState => ({
@@ -26,7 +28,7 @@ class App extends Component {
       )
         .then(res => res.json())
         .then(data => {
-          this.setState({ data: data.hits });
+          // this.setState({ data: data.hits });
 
           const newData = data.hits;
           let newArray = [];
@@ -54,7 +56,9 @@ class App extends Component {
           data={this.state.data}
         ></ImageGallery>
         {this.state.data.length >= 12 && (
-          <Button onClick={this.loadMore}></Button>
+          <Box as="div" display="flex" justifyContent="center" pt={20} pb={20}>
+            <Button onClick={this.loadMore}></Button>
+          </Box>
         )}
       </Box>
     );

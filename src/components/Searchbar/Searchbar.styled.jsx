@@ -12,6 +12,7 @@ export const HeaderSearch = styled.header`
   padding-left: 24px;
   padding-top: 12px;
   padding-bottom: 12px;
+  margin-bottom: 20px;
   color: #fff;
   background-color: #c290d1;
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
