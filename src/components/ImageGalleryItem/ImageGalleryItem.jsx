@@ -4,7 +4,7 @@ class ImageGalleryItem extends Component {
   render() {
     return (
       <GalleryItem key={this.props.id}>
-        <GalleryItemImg src={this.props.webformatURL} alt="" />
+        <GalleryItemImg src={this.props.webformatURL} alt={this.props.tags} />
       </GalleryItem>
     );
   }
