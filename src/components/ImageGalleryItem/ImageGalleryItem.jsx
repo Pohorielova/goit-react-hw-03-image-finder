@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { GalleryItem, GalleryItemImg } from './ImageGalleryItem.styled';
-const ImageGalleryItem = () => (
-  <GalleryItem>
-    <GalleryItemImg src="" alt="" />
-  </GalleryItem>
-);
+class ImageGalleryItem extends Component {
+  render() {
+    return (
+      <GalleryItem key={this.props.id}>
+        <GalleryItemImg src={this.props.webformatURL} alt="" />
+      </GalleryItem>
+    );
+  }
+}
 export default ImageGalleryItem;
