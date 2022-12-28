@@ -28,13 +28,20 @@ class App extends Component {
         .then(data => {
           this.setState({ data: data.hits });
 
+          const newData = data.hits;
+          let newArray = [];
+          newArray = [...this.state.data, ...newData];
+
+          this.setState(({ data }) => ({ data: newArray }));
+
           console.log(data.hits);
         });
     }
   }
+
   handleFormSubmit = searchQuery => {
     this.setState({ searchQuery });
-    this.setState({ page: 1 });
+    this.setState({ page: 1, data: [] });
   };
 
   render() {
