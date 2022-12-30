@@ -1,6 +1,6 @@
-// import { Box } from 'components/Box';
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import { BsSearch } from 'react-icons/bs';
+import PropTypes from 'prop-types';
 import {
   HeaderSearch,
   SearchForm,
@@ -30,6 +30,7 @@ class Searchbar extends Component {
       <HeaderSearch>
         <SearchForm onSubmit={this.handleSubmit}>
           <SearchFormBtn type="submit">
+            <BsSearch />
             <SearchFormBtnLabel>Search</SearchFormBtnLabel>
           </SearchFormBtn>
 
@@ -46,7 +47,6 @@ class Searchbar extends Component {
 }
 
 export default Searchbar;
-// Searchbar.propTypes = {
-//   value: PropTypes.string.isRequired,
-//   onChange: PropTypes.func.isRequired,
-// };
+Searchbar.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
